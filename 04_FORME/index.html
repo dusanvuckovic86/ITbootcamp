@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Osnovni podaci</legend>
+            <p>
+                <label for="">Ime:</label>
+                <input type="text" maxlength="15" value="Ana">
+            </p>
+            <p>
+                <label for="">Prezime</label>
+                <input type="text" placeholder="Unesite prezime">
+            </p>
+            <p>
+                <label for="">Godine</label>
+                <input type="number" min="18" step="1">
+            </p>
+            <!-- input pa kucamo dve tacke automatski doda neophodna polja -->
+            <p>
+                <label for="">E-mail</label>
+                <input type="email" name="" id="">
+            </p>
+            <p>
+                <label for="">Lozinka</label>
+                <input type="password" name="" id="">
+            </p>
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Ostali podaci</legend>
+            <!-- name se postavlja isto za sve u okviru jedne grupe kako bi se odabrala samo jedna vrednost -->
+            <!-- Posto tekst dugmeta nije u dugmetu moramo dodati value-vrednost kako bi znali na sta je neko kliknuo -->
+            <p>
+                <label for="">Odaberite pol:</label>
+                <input type="radio" name="pol" id="" value="Z">Zenski
+                <input type="radio" name="pol" id="" value="M">Muski
+                <input type="radio" name="pol" id="" value="D" checked>Drugo
+            </p>
+            <p>
+                <label for="">Odaberite kurs</label>
+                <input type="radio" name="kurs" id="" value="js">JavaScript
+                <input type="radio" name="kurs" id="" value="html">HTML
+                <input type="radio" name="kurs" id="" value="qa">QA
+            </p>
+
+            <p>
+                <label for="">Odaberite programske jezike</label>
+                <br>
+                <input type="checkbox" name="jezik" id="" value="js">JS
+                <input type="checkbox" name="jezik" id="" value="php">PHP
+                <input type="checkbox" name="jezik" id="" value="c++">C++
+                <input type="checkbox" name="jezik" id="" value="java">Java
+                <input type="checkbox" name="jezik" id="" value="python">Python
+            </p>
+
+            <p>
+                <label for="">Obrazovanje</label>
+                <select name="obrazovanje" id="">
+                    <option value="" disabled selected>Odaberite</option>
+                    <option value="os">Osnovna skola</option>
+                    <option value="ss">Srednja skola</option>
+                    <optgroup label="Fakultet">
+
+                        <option value="osf">Osnovne studije</option>
+                        <option value="msf">Master studije</option>
+                        <option value="dsf">Doktorske studije</option>
+
+                    </optgroup>
+
+                    
+
+                </select>
+            </p>
+
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Posalji">
+            <input type="reset" value="Resetuj">
+            <button>Klikni</button>
+        </p>
+
+    </form>
+</body>
+
+</html>
