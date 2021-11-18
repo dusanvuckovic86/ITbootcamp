@@ -1,0 +1,27 @@
+h3 {
+    color: green;
+    text-decoration: line-through;
+}
+h1 {
+    color: purple;
+}
+p {
+
+    color:seagreen;
+}
+#prvi {
+    text-align: right;
+}
+
+.zutaPozadina {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    /* margin: 50px; */
+}
+/* *{ 
+    margin: 50px;
+} -- zvezdica umesto klase odnosi se na svaki element pojedinacno*/
