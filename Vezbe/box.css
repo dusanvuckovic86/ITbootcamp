@@ -1,0 +1,19 @@
+span{
+    border: 1px solid black;
+    display: inline-block;
+    width: 250px;
+    height: 25px;
+    margin-right: 15px;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+#prvi {
+background-color: burlywood;
+    
+
+}
+#drugi {
+    
+background-color: gray;
+}
