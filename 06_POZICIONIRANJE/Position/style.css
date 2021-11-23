@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+header {
+    background-color: burlywood;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 100;
+}
+
+section {
+    position: relative;
+    top: 100px;
+    /* top: 35px spusta se 35px od pozicije na kojoj je bio, 100px ukoliko zelimo da spustimo odmah ispod hedera jer smo hederu dali visinu 100px */
+    left: 150px;
+    
+    background-color: coral;
+    margin: 10px;
+    width: 600px;
+    height: 250px;
+}
+
+/* position fixed u odnosu na ceo ekran, position apsolut u odnosu na neki parent element ali parent element mora da ima podesenu poziciju */
+
+section img {
+    width: 150px;
+    height: 150px;
+    position: absolute; 
+    /* u odnosu na prvi parent tag koji ima poziciju */
+    top: 50px;
+    left: 20px;
+
+}
+section p {
+    position:absolute;
+    top: 100px;
+    right: 20px;
+}
+section a {
+    position: absolute;
+    right: 20px;
+    bottom: 50px;
+}

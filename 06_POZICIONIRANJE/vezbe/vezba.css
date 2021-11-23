@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+/* header {
+    background-image: url("./asets_vezbe/logo_itbootcamp_400x400.png");
+    position: fixed;
+    top: 0;
+    height: 200px;
+    width: 100%;
+    background-size: contain;} */
+
+
+/* header div {
+    position: absolute;
+    left: 0px;
+    width: 300px;
+} */
+
+/* header div {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    width: 300px;
+} */
+
+/* header div {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+} */
+
+/* header div {
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+} */
+
+/* p {
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+
+.prvi {
+    position: absolute;
+    top: 250px;
+    background-color: blueviolet;
+   z-index: 1;
+
+}
+
+.drugi {
+    position: absolute;
+    top: 250px;
+    left: 150px;
+    background-color: chartreuse;
+} */
+
+/* header {
+    background-color: chartreuse;
+    height: 150px;
+    overflow: auto;
+} */
+
+
+div{
+    background-color: chartreuse;
+}
+p{
+    background-color: coral;
+    width: 25%;
+    float: left;
+}
+div p:nth-child(1) {
+    
+}
