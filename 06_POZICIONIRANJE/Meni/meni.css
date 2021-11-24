@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+#rest {
+    position: relative;
+    top: 150px;
+}
+
+/* horizontalni meni */
+nav {
+    position:fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+
+    overflow: hidden;
+    list-style-type: none;
+
+}
+
+/* kad uradimo float iscupamo sve li tagove iz ul taga, ul tag ostaje bez kontenta i gubi dimenziju */
+nav ul li {
+    float: left;
+    background-color: tomato;
+    border: 2px solid black;
+    width: 25%;
+    text-align: center;
+}
+/* linkovi su inline pocetno, zato menjamo displey:block kako bi popunili sav prostor u li elementu kako bi bila cela povrsina klikljiva */
+nav ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+}
+nav ul li a:hover {
+    background-color: yellowgreen;
+}
+
+
+
+/* padajuci meni */
+
+.submenu {
+    display: none;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+
+
+/* vertikalni meni */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer ul {
+    list-style-type: none;
+}
+footer ul li {
+    width: 25%;
+    background-color: rgb(79, 14, 79);
+}
+footer ul li a {
+    display: block;
+    padding: 10px 0 10px 5px;
+    text-decoration: none;
+    color: white;
+}
+
+footer ul li a:hover {
+    background-color: rgb(165, 165, 11);
+}
