@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="meni.css">
+</head>
+
+<body>
+    <!-- meni -->
+
+    <header class="row">
+        <div class="col-1">
+            <img src="../Meni sa dodatim stranicama/asets/airserbia.png" alt="logo">
+        </div>
+        <nav class="col-11">
+            <ul>
+                <li class="col-s-0"> <a href="meni.html">NASLOVNA</a></li>
+                <li class="col-s-0"> <a href="SveVesti.html">SVE VESTI</a></li>
+                <li class="col-s-0"> <a href="#">FUDBAL</a></li>
+                <li class="col-s-0"> <a href="#">KOŠARKA</a></li>
+                <li class="col-s-0"> <a href="#">TENIS</a></li>
+                <li class="col-s-0"> <a href="#">OSTALO</a></li>
+
+                <!-- dropdown -->
+
+                <li class="dropdown col-s-0">
+                    <a href="#">O TIMU</a>
+                    <div class="submenu col-s-0">
+                        <a href="#">link sub</a>
+                        <a href="#">link sub</a>
+                        <a href="#">link sub</a>
+                        <a href="#">link sub</a>
+                    </div>
+                </li>
+                <li class="col-s-0"> <a href="#">ULOGUJ SE</a></li>
+                <li class="col-s-0"> <a href="#">REGISTRUJ SE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- forma -->
+
+    <section>
+        <form action="">
+            <fieldset>
+                <p class="row">
+                    <label class="col-3" for="ime">Ime i Prezime</label>
+                    <input class="col-9" type="text">
+                </p>
+                <p class="row">
+                    <label class="col-3" for="email">E-mail</label>
+                    <input class="col-9" type="email">
+                </p>
+                <div class="row">
+                    <p class=" pozicijaRadioCheck">
+                        <label class="col-12" for="checkbox"></label>
+                        <input type="checkbox" name="check" id="" value="op11">Opcija 1
+                        <input type="checkbox" name="check" id="" value="op22">Opcija 2
+                    </p>
+                </div>
+                <div class="row">
+                    <p class="pozicijaRadioCheck">
+
+                        <label class="col-12" for="">Radio button</label>
+                        <input type="radio" name="opcija" id="" value="op1" checked>Opcija 1
+                        <input type="radio" name="opcija" id="" value="op1">Opcija 2
+                        <input type="radio" name="opcija" id="" value="op3">Opcija 3
+
+                    </p>
+                </div>
+                <p class="row">
+                    <label class="col-3" for="">Vas Komentar</label>
+                    <input class="col-9" type="textarea">
+                </p>
+                <p class="submit">
+                    <input type="submit" value="Potvrdite">
+                </p>
+
+            </fieldset>
+
+        </form>
+
+    </section>
+
+<!-- tabela -->
+
+<table>
+    <tr>
+        <td colspan="3"> <h1>Tabela primer</h1></td>
+    </tr>
+    <tr>
+        <th >Slika 1</th>
+        <th >Slika 2</th>
+        <th >Slika 3</th>
+    </tr>
+    <tr>
+        <td > <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nisi eos aliquid consectetur quas quod, minus temporibus accusamus, laboriosam vero, ad neque doloremque ullam dolore.</p></td>
+        <td > <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nisi eos aliquid consectetur quas quod, minus temporibus accusamus, laboriosam vero, ad neque doloremque ullam dolore.</p></td>
+        <td > <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam nisi eos aliquid consectetur quas quod, minus temporibus accusamus, laboriosam vero, ad neque doloremque ullam dolore.</p></td>
+    </tr>
+    <tr>
+        <td colspan="1"> <img src="../Meni sa dodatim stranicama/asets/slika1.jpg" alt=""></td>
+        <td colspan="1"> <img src="../Meni sa dodatim stranicama/asets/slika2.jpg" alt=""></td>
+        <td colspan="1"> <img src="../Meni sa dodatim stranicama/asets/slika3.jpg" alt=""></td>
+        
+    </tr>
+    <tr>
+        <td colspan="3"> <p>Lorem ipsum dolor sit amet consectetur. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore fugit saepe possimus! ipsum dolor sit amet. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos rerum praesentium, sit culpa nemo fugiat dolore ullam doloremque distinctio ea facilis consequatur, deserunt commodi sapiente?</p></td>
+
+    </tr>
+
+</table>
+
+<div class="row">
+    <footer class="col-12">
+        <p>OVO JE FOOTER</p>
+    </footer>
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+}
+
+.row {
+    overflow: hidden;
+    background-color: tomato;
+
+
+}
+
+[class*="col-"]{
+    float: left;
+}
+img {
+    width: 100%;
+    padding: 5px;
+   
+}
+
+nav ul {
+    overflow: hidden;
+}
+
+ul li {
+    float: left;
+    list-style-type: none;
+}
+
+ul li:nth-child(9), ul li:nth-child(8){
+    float: right;
+    vertical-align: middle;
+    
+}
+
+ul li a {
+    text-decoration: none;
+    background-color: black;
+    display: block;
+    color: white;
+    padding: 10px;
+
+}
+
+ul li a:hover {
+    background-color: tomato;
+}
+
+
+li:nth-child(9) a, li:nth-child(8) a {
+    background-color: tomato;
+    font-size: 12px;
+}
+
+ li:nth-child(8) a:hover, li:nth-child(9) a:hover {
+    color: black;
+}
+
+.sveVesti {
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 5%;
+    
+}
+
+
+.col-1 { width: calc(100% / 12); }
+.col-2 { width: calc(100% / 12 * 2); }
+.col-3 { width: calc(100% / 12 * 3); }
+.col-4 { width: calc(100% / 12 * 4); }
+.col-5 { width: calc(100% / 12 * 5); }
+.col-6 { width: calc(100% / 12 * 6); }
+.col-7 { width: calc(100% / 12 * 7); }
+.col-8 { width: calc(100% / 12 * 8); }
+.col-9 { width: calc(100% / 12 * 9); }
+.col-10 { width: calc(100% / 12 * 10); }
+.col-11 { width: calc(100% / 12 * 11); }
+.col-12 { width: 100%; }
+
+
+/* dropdown meni */
+
+.submenu {
+    display: none;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}

@@ -1,0 +1,184 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+}
+
+/* meni */
+
+.row {
+    overflow: hidden;
+    
+}
+header {
+    background-color: tomato;
+}
+
+[class*="col-"]{
+    float: left;
+}
+img {
+    width: 100%;
+    padding: 5px;
+   
+}
+
+ul li {
+    float: left;
+    list-style-type: none;
+}
+
+ ul li:nth-child(9), ul li:nth-child(8){
+    float: right;
+    
+}
+
+ul li a {
+    text-decoration: none;
+    background-color: black;
+    display: block;
+    color: white;
+    padding: 20px;
+
+}
+
+ul li a:hover {
+    background-color: tomato;
+}
+
+
+ li:nth-child(9) a, li:nth-child(8) a {
+    background-color: tomato;
+    font-size: 12px;
+    
+}
+
+li:nth-child(9) a:hover,  li:nth-child(8) a:hover {
+    color: black;
+}
+
+li:nth-child(8){
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+/* dropdown meni */
+
+.submenu {
+    display: none;
+    position: absolute;
+    /* width: calc(100% / 20); */
+    z-index: 1;
+}
+
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+
+/* forma */
+
+form {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    top: 25px;
+}
+
+.pozicijaRadioCheck {
+    position: relative;
+    left: calc(100% / 12 * 3);
+}
+
+fieldset {
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* tabela */
+
+table {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+    
+}
+
+td img {
+    display: block;
+    width: 100%;
+    height: auto;
+   
+}
+table tr p {
+    text-align: justify;
+    padding: 10px;
+}
+h1 {
+    text-align: center;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 899px){
+    body{
+        width: 100%;
+    }
+
+    [class*="col-"]{
+        width: 100%;
+    }
+    [class*="col-s-0"]{
+        width: 100%;
+        text-align: center;
+        border-bottom: tomato 1px solid;
+    }
+
+    nav ul li:nth-child(8) a, nav ul li:nth-child(9) a{
+        text-align: center;
+    }
+    .pozicijaRadioCheck {
+        position: relative;
+        left: 0;
+    }
+    table{
+        padding-bottom: 50px;
+        /* dodati za mobilnu verziju ako je footer fiksiran kako se nebi preklapali elementi */
+
+    }
+}
+
+@media only screen and (min-width: 900px){
+
+    .col-1 { width: calc(100% / 12); }
+.col-2 { width: calc(100% / 12 * 2); }
+.col-3 { width: calc(100% / 12 * 3); }
+.col-4 { width: calc(100% / 12 * 4); }
+.col-5 { width: calc(100% / 12 * 5); }
+.col-6 { width: calc(100% / 12 * 6); }
+.col-7 { width: calc(100% / 12 * 7); }
+.col-8 { width: calc(100% / 12 * 8); }
+.col-9 { width: calc(100% / 12 * 9); }
+.col-10 { width: calc(100% / 12 * 10); }
+.col-11 { width: calc(100% / 12 * 11); }
+.col-12 { width: 100%; }
+
+}
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: aqua;
+    padding: 15px;
+    text-align: center;
+    
+}
