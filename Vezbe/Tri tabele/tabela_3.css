@@ -1,0 +1,38 @@
+table {
+    width: 600px;    
+}
+
+tr {
+    display: inline;
+}
+
+tr:nth-child(1) td#prvi:nth-child(1){
+    background-color:  blue;
+    width: 600px;
+}
+
+
+table tr:nth-child(2) td#drugi:nth-child(1){
+    background-color: blueviolet;
+    width: 300px ;
+}
+table tr:nth-child(2) td#treci:nth-child(2){
+    background-color: rgb(226, 110, 43);
+    width: 300px;
+}
+
+table tr:nth-child(3) td#cetvrti:nth-child(1){
+    background-color: chartreuse;
+    width: 200px;
+    
+}
+table tr:nth-child(3) td#peti:nth-child(2) {
+
+    background-color: crimson;
+    width:200px;
+}
+table tr:nth-child(3) td#sesti:nth-child(3){
+    background-color: cyan;
+    width: 200px;
+}
+

@@ -16,4 +16,6 @@ body {
     box-sizing: border-box;
     /* odmah moze da se doda margina 0 kako bi svi elementi pocetno bili bez margine */
     margin: 0;
+    
 }
+

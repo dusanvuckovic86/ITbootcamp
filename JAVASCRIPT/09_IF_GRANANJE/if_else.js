@@ -1,16 +1,16 @@
-console.log ("If Else grananje");
+console.log("If Else grananje");
 
-if(true){
+if (true) {
     console.log("Uslov je ispunjen")
 }
-else{
+else {
     console.log("Uslov nije ispunjen")
 }
 
-if(false){
+if (false) {
     console.log("Uslov je ispunjen")
 }
-else{
+else {
     console.log("Uslov nije ispunjen")
 }
 
@@ -21,18 +21,18 @@ else{
 a = 10;
 b = 7;
 
-if (a<b){
+if (a < b) {
     console.log("Broj " + a + "je strogo manji od broja" + b)
 }
-else{
+else {
     console.log(`broj ${a} je "veci" ili 'jednak broju' ${b}`);
 }
 
 let god = 27;
-if(god>=18){
+if (god >= 18) {
     console.log("Osoba je punoletna")
 }
-else{
+else {
     console.log("Osoba je maloletna")
 }
 
@@ -40,10 +40,10 @@ else{
 a = 6;
 b = 9;
 
-if(a > b){
+if (a > b) {
     console.log(`Broj ${a} je veci od broja ${b}`);
 }
-else{
+else {
     console.log(`Broj ${a} je manji od broja ${b}`);
 }
 
@@ -51,12 +51,28 @@ else{
 
 let t = 39;
 
-if (t>=0){
+if (t >= 0) {
     console.log("Temperatura je u plusu");
 }
-else{
+else {
     console.log("Temperatura je u minusu")
 }
+
+
+// treci zadatak
+
+let pol = "Z";
+// ako stavimo malo slovo m isto ce prikazati zenski avatar jer su velika i mala slova takodje razlicita u JS
+if (pol == "M") {
+    //prikazi avatar muskarca
+    document.body.innerHTML += `<img src="asets/m.jpg">`;
+}
+else {
+    //prikazi avatar zene
+    document.body.innerHTML += `<img src="asets/z.jpg">`;
+}
+
+
 
 //cetvrti zadatak
 
@@ -65,10 +81,10 @@ let vreme = new Date();
 let trenutnoVreme = vreme.getHours();
 console.log(trenutnoVreme);
 
-if (trenutnoVreme <= 12){
+if (trenutnoVreme <= 12) {
     console.log("Prepodne")
 }
-else{
+else {
     console.log("Popodne")
 }
 
@@ -80,45 +96,34 @@ console.log(trenutnaGodina);
 let godinaRodjenja = 1986;
 let godinaSada = trenutnaGodina - godinaRodjenja;
 
-if(godinaSada >= 18){
-    console.log(`Osoba je punoletna trenutno ima ${godinaSada}` )
+if (godinaSada >= 18) {
+    console.log(`Osoba je punoletna trenutno ima ${godinaSada}`)
 
 }
-else{
+else {
     console.log(`Osoba je maloletna trenutno ima ${godinaSada}`)
 }
 
 
 
- // treci zadatak
 
- let pol = "Z";
- // ako stavimo malo slovo m isto ce prikazati zenski avatar jer su velika i mala slova takodje razlicita u JS
- if (pol == "M"){
-     //prikazi avatar muskarca
-     document.body.innerHTML += `<img src="asets/m.jpg">`;
- }
- else{
-     //prikazi avatar zene
-     document.body.innerHTML += `<img src="asets/z.jpg">`;
- }
 
- //sesti zadatak (BITAN KONCEPT POREDJENJA)
+//sesti zadatak (BITAN KONCEPT POREDJENJA)
 
- let b1 = 15;
- let b2 = 9;
- let b3 = 27;
+let b1 = 15;
+let b2 = 9;
+let b3 = 27;
 
- let maks = b1; //pretpostavka
+let maks = b1; //pretpostavka
 
- //ako je pretpostavka losa uraditi njen update
- if (maks < b2) {
-     maks = b2;
- }
+//ako je pretpostavka losa uraditi njen update
+if (maks < b2) {
+    maks = b2;
+}
 
- if(maks < b3){
-     maks = b3;
- }
+if (maks < b3) {
+    maks = b3;
+}
 
- document.body.innerHTML += `<p>${maks}</p>`
+document.body.innerHTML += `<p>${maks}</p>`
  //+= dodajemo na prethodni sadrzaj ako je samo = onda prelepi jer se na takav nacin dodeljuje vrednost

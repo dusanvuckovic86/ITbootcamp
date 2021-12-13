@@ -85,6 +85,8 @@ i = 1;
 let n = 16;
 while (i <= n) {
 
+    //1,2 je ostatak
+
     if (i % 3 == 1) {
         document.body.innerHTML += `<p style='color:red;'>${i} paragraf</p>`;
     }
@@ -158,4 +160,3 @@ console.log(`Proizvod brojeva od ${n} do ${m} jednak je ${proizvod}`);
 
 // deseti zadatak
 //Odrediti sumu kvadrata parnih i sumu kubova neparnih brojeva od n do m
-
