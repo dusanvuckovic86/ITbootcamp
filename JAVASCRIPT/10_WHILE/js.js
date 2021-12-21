@@ -26,7 +26,7 @@ console.log(`Vrednost promenljive nakon izlaska iz WHILE petlje i je: ${i} jer p
 
 let br = 1;
 while (br <= 20) {
-    console.log(br);
+    console.log(br*2);
     br++;
 }
 

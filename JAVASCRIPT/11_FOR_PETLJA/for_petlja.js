@@ -207,7 +207,7 @@ let tabela = `<table border="1">`;
 for (let red = 1; red <= 6; red++) {
     if (red % 2 == 0) {
         tabela +=
-            `<tr class="roze">
+            `<tr style='background-color:black'>
         <td>tekst</td>
         <td>tekst</td>
         </tr>
@@ -224,3 +224,7 @@ for (let red = 1; red <= 6; red++) {
 }
 tabela += `</table>`;
 document.body.innerHTML += tabela;
+
+
+
+
