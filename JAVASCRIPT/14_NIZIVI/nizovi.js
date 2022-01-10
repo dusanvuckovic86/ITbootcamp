@@ -210,7 +210,8 @@ console.log(minVrednost(nizSesti))
 
 
 
-let niz7 = [9, 1, 2, 3, 4, 5];
+let niz7 = [9, 1, 2, 13, 4, 5];
+
 
 let maxIndex = niz => {
 
@@ -231,7 +232,9 @@ console.log(maxIndex(niz7))
 
 // Oderditi broj maksimalnih elemenata niza
 
-let niz71 = [1, 2, 3, 4, 5, 5, 5]
+let niz71 = [1, 2, 3, 4, 5, 6, 6, 6]
+
+
 let brMax = niz => {
     let maks = niz[0];
     let brojac = 0;
@@ -326,17 +329,16 @@ console.log(zbirPozitivnih(nizDeseti))
 
 //Odrediti broj parnih elemenata u celobrojnom nizu.
 
-let nizJedanaesti = [1, 2, 3, 4, 5, 6, 7, 8];
+let nizJedanaesti = [1, 2, 3, 4, 5, 6, 7, 8, 4, 8];
 
 let zbirParnih = niz => {
-    let suma = 0;
-
+    let brojac = 0;
     for (let i = 0; i < niz.length; i++) {
         if (niz[i] % 2 == 0) {
-            suma += niz[i];
+            brojac++
         }
     }
-    return suma;
+    return brojac
 }
 console.log(zbirParnih(nizJedanaesti));
 
@@ -391,7 +393,7 @@ let nizCetrnaesti = [1, -8, -5, 2, 3, -7, -9];
 
 let promeniZnak = niz => {
     for (let i = 0; i < niz.length; i++) {
-        niz[i] -= niz[i]*2;
+        niz[i] = niz[i] - niz[i] * 2;
     }
     return niz;
 }
@@ -403,238 +405,249 @@ console.log(promeniZnak(nizCetrnaesti))
 // Promeniti znak svakom neparnom elementu celobrojnog niza sa parnim indeksom.
 
 let nizPetnaesti = [1, -8, -5, 2, 3, -7, -9];
- 
+
 let promeniZnakNeparnomElementu = niz => {
 
-    for(let i =0; i<niz.length; i++){
-
-        if ( i%2==0 && niz[i]%2!=0){
-
-            niz[i]=niz[i]-(niz[i]*2);
-        }
-    }
-    return niz;
-}
-console.log(promeniZnakNeparnomElementu(nizPetnaesti))
-
-
-//sesnaesti zadatak
-
-//Dat je niz stavki za kupovinu (članovi niza su stringovi). Prolaskom kroz niz napraviti neuređenu listu i ispisati je u html dokument.
-
-
-let listaStringova = ["jabuke", "banane", "krompir", "hleb", "mleko","krofne"];
-
-
-let neuredjenaLista = niz =>{
-
-
-    let lista = "<ul>"
-    for (let i=0; i<niz.length;i++){
-
-     lista += `<li>${niz[i]}</li>`;
-        
-    }
-    lista += "</ul>"
-    return lista;
-}
-document.body.innerHTML += neuredjenaLista(listaStringova)
-
-
-
-
-// let listaKupovine = niz => {
-//     let rezultat = "";
-//     rezultat += "<ul>";
-
-//     for (let i = 0; i < niz.length; i++) {
-//         rezultat += `<li>${niz[i]}</li>`
-//     }
-//     rezultat += "</ul>";
-//     return rezultat;
-// }
-
-// // document.body.innerHTML += listaKupovine(lista)
-
-// document.getElementById('d1').innerHTML += listaKupovine(lista);
-
-
-
-
-
-
-
-
-//sedamnaesti zadatak
-
-
-//Dat je niz imena košarkaškog tima. Prolaskom kroz niz formirati tabelu u čijim su redovima imena tima, i tabelu ispisati u html dokument.
-
-let tim = ["ime", "ime", "ime", "ime"];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let tabelaTima = niz => {
-    let rez = "";
-    rez += `<table>`;
     for (let i = 0; i < niz.length; i++) {
-        rez += `<tr><td>${niz[i]}</td></tr>`;
-    }
-    rez += `</table>`;
-    document.body.innerHTML += rez;
-}
-
-tabelaTima(tim)
-
-
-
-//osamnaesti zadatak
-
-//Dat je niz stringova čiji su članovi putanje do slika. Prikazati sve sliku u html dokumentu sa putanjama navedenim u nizu.
-let nizSlika = [`https://cdn.pixabay.com/photo/2019/10/31/11/27/serbia-4591676__340.jpg`, `https://cdn.pixabay.com/photo/2019/10/28/10/37/belgrade-4583965__340.jpg`];
-
-
-let slike = niz => {
-    for (let i = 0; i < niz.length; i++) {
-        document.body.innerHTML += `<img src="${niz[i]}">`
-    }
-
-}
-
-slike(nizSlika)
-
-
-//devetnaesti zadatak
-
-//Ispisati dužinu svakog elementa u nizu stringova.
-
-
-let cars20 = ["Toyota", "BMW", "Volvo"];
-
-let dElemenata = niz => {
-    for (let i = 0; i < niz.length; i++) {
-        console.log(niz[i].length)
-    }
-}
-
-dElemenata(cars20)
-
-
-
-
-
-
-
-
-
-//dvadeseti zadatak
-
-//Odrediti element u nizu stringova sa najvećom dužinom.
-
-
-let cars201 = ["Toyota", "BMW", "Volvo", "Volkswagen"];
-
-
-let najduziElemenat = niz => {
-
-    let maks = niz[0].length;
-    let maksString = niz[0];
-    for (let i = 0; i < niz.length; i++) {
-
-        if (maks < niz[i].length) {
-            maks = niz[i].length;
-            maksString = niz[i]
-        }
-    }
-    return maksString;
-}
-
-console.log(najduziElemenat(cars201))
-
-
-
-//dvadesetprvi zadatak
-
-//Odrediti broj elemenata u nizu stringova čija je dužina veća od prosečne dužine svih stringova u nizu.
-
-
-let cars21 = ["Toyota", "BMW", "Volvo"];
-
-let prosecnaDuzina = niz => {
-    let suma = 0;
-    let brojac = 0;
-
-    for (let i = 0; i < niz.length; i++) {
-        suma += niz[i].length;
-        brojac++;
-    }
-    return (brojac != 0) ? suma / brojac : 0;
-}
-
-let brojVeciOdProsecnog = niz => {
-    let brojac = 0;
-    let prosecnaDuzina1 = prosecnaDuzina(niz);
-
-    for (let i = 0; i < niz.length; i++) {
-        if (niz[i].length > prosecnaDuzina1) {
-            brojac++;
-        }
-    }
-    return brojac;
-}
-console.log(prosecnaDuzina(cars21));
-console.log(brojVeciOdProsecnog(cars21))
-
-
-//dvadesetdrugi zadatak
-
-//Odrediti broj elemenata u nizu stringova koji sadrže slovo 'a’.
-
-
-let cars22 = ["Toyota", "BMW", "Volvo"];
-
-let brojSadrziA = niz => {
-    let brojac = 0;
-    for (let i = 0; i < niz.length; i++) {
-
-        if (niz[i].includes("a")) {
-            brojac++;
+        if (niz[i] % 2 != 0 && i % 2 == 0) {
+            niz[i] = niz[i] - niz[i] * 2
         }
 
+        return niz;
     }
-    return brojac;
-}
-console.log(brojSadrziA(cars22));
+    console.log(promeniZnakNeparnomElementu(nizPetnaesti))
 
 
-//broj karaktera
+    //sesnaesti zadatak
 
-let brojKarakteraA = niz => {
-    let brojac = 0;
-    for (let i = 0; i < niz.length; i++) {
-        //niz[i] je string
-        let element = niz[i];
-        //sada prolazimo kroz sve karaktere stringa
-        for (let j = 0; j < niz.length; j++) {
-            if (element[j] == a) {
+    //Dat je niz stavki za kupovinu (članovi niza su stringovi). Prolaskom kroz niz napraviti neuređenu listu i ispisati je u html dokument.
+
+
+    let listaStringova = ["jabuke", "banane", "krompir", "hleb", "mleko", "krofne"];
+
+
+    let neuredjenaLista = niz => {
+
+
+        let lista = "<ul>"
+        for (let i = 0; i < niz.length; i++) {
+
+            lista += `<li>${niz[i]}</li>`;
+
+        }
+        lista += "</ul>"
+        return lista;
+    }
+    document.body.innerHTML += neuredjenaLista(listaStringova)
+
+    // document.getElementById('d1').innerHTML += listaKupovine(lista);
+
+
+
+
+
+    //sedamnaesti zadatak
+
+
+    //Dat je niz imena košarkaškog tima. Prolaskom kroz niz formirati tabelu u čijim su redovima imena tima, i tabelu ispisati u html dokument.
+
+    let tim = ["Zvezda", "Partizan", "CSKA", "Vojvodina"];
+
+
+    let tabelaTima = niz => {
+
+        let tabela = `<table>`;
+        for (let i = 0; i < niz.length; i++) {
+            tabela += `<tr><td>${niz[i]}</td></tr>`;
+        }
+        tabela += `</table>`;
+        document.body.innerHTML += tabela;
+    }
+
+
+    tabelaTima(tim);
+
+
+
+
+
+
+    //osamnaesti zadatak
+
+    //Dat je niz stringova čiji su članovi putanje do slika. Prikazati sve sliku u html dokumentu sa putanjama navedenim u nizu.
+
+    let nizSlika = [`https://www.onlycroatia.com/media/cities/124/4281.jpg`, `https://www.onlycroatia.com/media/cities/124/7322.jpg`, `https://www.onlycroatia.com/media/cities/124/6525.jpg`, `https://www.onlycroatia.com/media/cities/124/6753.jpg`, `https://www.onlycroatia.com/media/cities/124/1518.jpg`];
+
+
+
+    let slike = niz => {
+        for (let i = 0; i < niz.length; i++) {
+            document.body.innerHTML += `<img src="${niz[i]}">`
+        }
+    }
+
+    slike(nizSlika)
+
+
+
+
+    //devetnaesti zadatak
+
+    //Ispisati dužinu svakog elementa u nizu stringova.
+
+
+    let lista19 = ["jabuke", "krompir", "banane", "hleb", "mleko", "krofne"];
+
+
+    let duzinaElemenata = niz => {
+        for (let i = 0; i < niz.length; i++) {
+            console.log(niz[i].length)
+        }
+    }
+
+    duzinaElemenata(lista19)
+
+
+
+
+
+    //dvadeseti zadatak
+
+    //Odrediti element u nizu stringova sa najvećom dužinom.
+
+
+    let cars201 = ["Toyota", "BMW", "Volvo", "Volkswagen"];
+
+
+    let najduziElement = niz => {
+
+        let maxDuzina = niz[0].length;
+        let maxString = niz[i];
+
+        for (let i = 0; i < niz.length; i++) {
+
+            if (maxDuzina < niz[i].length) {
+                maxDuzina = niz[i].length;
+                maxString = niz[i];
+            }
+
+        }
+        return maxString;
+    }
+
+    console.log(najduziElement(cars201));
+
+
+
+
+    //dvadesetprvi zadatak
+
+    //Odrediti broj elemenata u nizu stringova čija je dužina veća od prosečne dužine svih stringova u nizu.
+
+
+
+    let cars21 = ["Toyota", "BMW", "Volvo", "Volkswagen", "Audi"];
+
+    let duzinaVecaOdSrVr = niz => {
+        let suma = 0;
+        for (let i = 0; i < niz.length; i++) {
+            suma += niz[i].length;
+        }
+        let sRVr = suma / niz.length;
+
+
+        let brojac = 0;
+        for (let i = 0; i < niz.length; i++) {
+            if (niz[i].length > sRVr) {
                 brojac++;
             }
         }
+        return brojac;
     }
-    return brojac;
-}
-console.log(brojSadrziA(cars22));
 
-//dvadesettreci zadatak
-//Odrediti broj elemenata u nizu stringova koji počinju na slovo 'a' ili 'A’.
+    console.log(duzinaVecaOdSrVr(cars21))
+
+
+
+    // //dvadesetdrugi zadatak
+
+    // //Odrediti broj elemenata u nizu stringova koji sadrže slovo 'a’.
+
+
+    let niz22 = ["jabuke", "krompir", "banane", "hleb", "mleko", "krofne", "vodA"];
+
+    let slovaA = niz => {
+        let brojac = 0;
+        for (let i = 0; i < niz.length; i++) {
+            if (niz[i].includes("a") || niz[i].includes("A")) {
+                brojac++;
+            }
+        }
+        return brojac;
+    }
+
+    console.log(slovaA(niz22))
+
+
+
+    // Broj odredjenog karaktera
+
+
+    let niz221 = ["jabuke", "krompir", "banane", "hleb", "mleko", "krofne", "vodA"];
+
+    let brojKaraktera = niz => {
+        let brojac = 0;
+
+        for (let i = 0; i < niz.length; i++) {
+            let element = niz[i];
+            for (let k = 0; k < niz.length; k++) {
+                if (element[k] == "k") {
+                    brojac++;
+                }
+            }
+        }
+        return brojac;
+    }
+
+    console.log(brojKaraktera(niz221))
+
+
+
+    //dvadesettreci zadatak
+
+
+    //Odrediti broj elemenata u nizu stringova koji počinju na slovo 'a' ili 'A’.
+
+    let cars23 = ["Toyota", "BMW", "Volvo", "Volkswagen", "Audi"];
+
+    let brojStringovaPrvoA = niz => {
+        let brojac = 0;
+
+        for (let i = 0; i < niz.length; i++) {
+            if (niz[i].charAt(0) == "a" || niz[i].charAt(0) == "A") {
+                brojac++;
+            }
+        }
+        return brojac;
+    }
+
+    console.log(brojStringovaPrvoA(cars23))
+
+    //dvadesetcetvrti zadatak
+
+
+    let a = [1, 4, 7, -5];
+    let b = [1, 4, 7, -5];
+
+    let zadatak24 = (a, b) => {
+        let c = [];
+        for (let i = 0; i < a.length; i++) {
+            c[2 * i] = a[i];
+            c[2 * i + 1] = b[i]
+        }
+        return c
+    }
+
+    let rezultat = zadatak24(a, b);
+    console.log(rezultat)
+}

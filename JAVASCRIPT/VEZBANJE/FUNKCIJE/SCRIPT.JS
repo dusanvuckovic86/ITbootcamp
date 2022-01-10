@@ -126,55 +126,174 @@ console.log(praksa(50000, 3))
 
 
 
-    function fabrika(a, b, c) {
-        //1. poredjam ih da a>b i b>c, tako da cemo morati da ih ispremestamo
-        // analogija: sipanje soka iz jedne case u drugu -> sipamo u trecu casu prvo, da bi sacuvali jedan sok iz jedne case, itd.
-        if (a < b) {
-            let pomocni = a;
-            a = b;
-            b = pomocni;
-        }
-        if (a < c) {
-            let pomocni = a;
-            a = c;
-            c = pomocni;
-        }
-        //ovim gore smo osigurali da je a najvece
-        if (b < c) {
-            let pomocni = b;
-            b = c;
-            c = pomocni;
-        }
-        // varijanta 1: prosledjeno 40> 30> 20> d -> fali duzina 10
-        if (a - b == b - c) {
-            return c - (b - c); //od c oduzimamo razliku i dobijemo cetvrti nogar
-        }
-        // varijanta 2: prosledjeno 40>b>20>10 -> fali 30
-        else if (a - b == 2 * (b - c)) {
-            return a - (b - c);
-        }
-        // varijanta 3: prosledjeno 40>30>c>10 -> fali 20
-        else if (a - b == (b - c) / 2) {
-            return b - (a - b);
-        }
-        else {
-            return 0; //umesto da izbaci gresku
-        }
-    } 
-console.log(fabrika(36,49,56))
+function fabrika(a, b, c) {
+    //1. poredjam ih da a>b i b>c, tako da cemo morati da ih ispremestamo
+    // analogija: sipanje soka iz jedne case u drugu -> sipamo u trecu casu prvo, da bi sacuvali jedan sok iz jedne case, itd.
+    if (a < b) {
+        let pomocni = a;
+        a = b;
+        b = pomocni;
+    }
+    if (a < c) {
+        let pomocni = a;
+        a = c;
+        c = pomocni;
+    }
+    //ovim gore smo osigurali da je a najvece
+    if (b < c) {
+        let pomocni = b;
+        b = c;
+        c = pomocni;
+    }
+    // varijanta 1: prosledjeno 40> 30> 20> d -> fali duzina 10
+    if (a - b == b - c) {
+        return c - (b - c); //od c oduzimamo razliku i dobijemo cetvrti nogar
+    }
+    // varijanta 2: prosledjeno 40>b>20>10 -> fali 30
+    else if (a - b == 2 * (b - c)) {
+        return a - (b - c);
+    }
+    // varijanta 3: prosledjeno 40>30>c>10 -> fali 20
+    else if (a - b == (b - c) / 2) {
+        return b - (a - b);
+    }
+    else {
+        return 0; //umesto da izbaci gresku
+    }
+}
+console.log(fabrika(30, 40, 50))
 
 
 //osmi zadatak
 
 //Napisati funkciju prethodniDan kojoj se prosleđuju tri pozitivna cela broja koja predstavljaju dan, mesec i godinu jednog ispravnog datuma (najuporniji mogu da ispituju i da li su dobre prosleđene vrednosti :) ). Funkcija ispisuje tri cela broja koja predstavljaju dan, mesec i godinu jučerašnjeg datuma. Svi brojevi se ispisuju u jednom redu, a iza svakog broja navodi se tačka.
 
-function prethodniDan(d,m,g){
-    let datum = new Date();
-    let jucerasnjiDatum = new Date( datum.getTime() - 24*60*60*1000)
 
-    return jucerasnjiDatum;
+
+//     if (g % 4 == 0 && (g % 100 != 0 || g % 400 == 0)) {
+//         if (d >= 2 && d <= 31 && m != 3) {
+//             console.log(`Jucerasnji datum je ${d - 1}.${m}.${g}`)
+//         }
+//         else if (d == 1) {
+//             if (m >= 2 && m <= 12 && m != 3) {
+//                 console.log(`Jucerasnji datum je ${d = 31}.${m = m - 1}.${g}`)
+//             }
+//             else if (m == 1) {
+//                 console.log(`Jucerasnji datum je ${d = 31}.${m = 12}.${g - 1}`)
+//             }
+//             else if (m == 3) {
+//                 console.log(`Jucerasnji datum je ${d = 29}.${m = m - 1}.${g}`)
+//             }
+//             else {
+
+//                 console.log(`Pogresan unos`)
+
+//             }
+
+//         }
+//         else {
+
+//         }
+
+//     }
+//     else {
+//         if (d >= 2 && d <= 31 && m != 3) {
+//             console.log(`Jucerasnji datum je ${d - 1}.${m}.${g}`)
+//         }
+//         else if (d == 1) {
+//             if (m >= 2 && m <= 12 && m != 3) {
+//                 console.log(`Jucerasnji datum je ${d = 31}.${m = m - 1}.${g}`)
+//             }
+//             else if (m == 1) {
+//                 console.log(`Jucerasnji datum je ${d = 31}.${m = 12}.${g - 1}`)
+//             }
+//             else if (m == 3) {
+//                 console.log(`Jucerasnji datum je ${d = 28}.${m = m - 1}.${g}`)
+//             }
+//             else {
+
+//                 console.log(`Pogresan unos`)
+
+//             }
+
+//         }
+//     }
+
+
+// }
+
+
+
+function prethodniDan(d, m, g) {
+
+    switch (m) {
+        case m = 1:
+        case m = 2:
+        case m = 4:
+        case m = 6:
+        case m = 8:
+        case m = 11:
+            if (d >= 2 && d <= 31) {
+                console.log(`Jucerasnji datum je ${d - 1}.${m}.${g}`)
+            }
+            else if (d == 1) {
+                if (m >= 2 && m <= 12) {
+                    console.log(`Jucerasnji datum je ${d = 31}.${m = m - 1}.${g}`)
+                }
+                else if (m == 1) {
+                    console.log(`Jucerasnji datum je ${d = 31}.${m = 12}.${g - 1}`)
+                }
+                else {
+
+                    console.log(`Pogresan unos`)
+
+                }
+            }
+            break;
+
+
+        case m = 5:
+        case m = 7:
+        case m = 10:
+        case m = 12:
+            if (d >= 2 && d <= 30) {
+                console.log(`Jucerasnji datum je ${d - 1}.${m}.${g}`)
+            }
+            else if (d == 1) {
+                if (m >= 2 && m <= 12) {
+                    console.log(`Jucerasnji datum je ${d = 30}.${m = m - 1}.${g}`)
+                }
+                else if (m == 1) {
+                    console.log(`Jucerasnji datum je ${d = 30}.${m = 12}.${g - 1}`)
+                }
+                else {
+
+                    console.log(`Pogresan unos`)
+
+                }
+            }
+
+            break;
+
+        case m = 3:
+            if (g % 4 == 0 && (g % 100 != 0 || g % 400 == 0)) {
+                if (d >= 2 && d <= 31) {
+                    console.log(`Jucerasnji datum je ${d - 1}.${m}.${g}`)
+                }
+                else if (d == 1) {
+                    console.log(`Jucerasnji datum je ${d = 29}.${m = m - 1}.${g}`)
+                }
+            }
+            else {
+                if (d >= 2 && d <= 31) {
+                    console.log(`Jucerasnji datum je ${d - 1}.${m}.${g}`)
+                }
+                else if (d == 1) {
+                    console.log(`Jucerasnji datum je ${d = 28}.${m = m - 1}.${g}`)
+                }
+            }
+
+    }
+
 }
-
-let jucerasnjiDatumJe = console.log(prethodniDan())
-
-
+prethodniDan(31, 2, 2021)

@@ -146,67 +146,147 @@ console.log(minVrednost(niz6))
 
 let niz7 = [1, 2,-6, 9, 3, 4];
 
-let indexMax = niz =>{
+let maxIndex = niz=>{
     let max = 0;
-    let indexMaks = 0;
-    niz.forEach((element, index) => {          //moze da se upise (i) umesto index
-        if (element > max){
-            max = element;
-            indexMaks = index;
-        }
-    })
-    return indexMaks;
-}
-console.log(indexMax(niz7))
+    let maxIndex = 0;
 
+    niz.forEach((element, i)=>{
+        if (max <element){
+            max = element;
+            maxIndex = i;
+        }
+    });
+    return maxIndex
+}
+
+console.log(maxIndex(niz7))
+
+
+
+// let indexMax = niz =>{
+//     let max = 0;
+//     let indexMaks = 0;
+//     niz.forEach((element, index) => {          //moze da se upise (i) umesto index
+//         if (element > max){
+//             max = element;
+//             indexMaks = index;
+//         }
+//     })
+//     return indexMaks;
+// }
+// console.log(indexMax(niz7))
+
+
+
+// Osmi zadatak
 
 //Odrediti indeks minimalnog elementa celobrojnog niza.
 
 let temperatura = [1, 2,0,0,2,1,2,0,2,2];
 
-function maksEl (niz){
-    let maks = niz[0];
-    
-    for (let i = 1; i < niz.length; i++) {
-        if (niz[i] > maks) {
-            maks = niz[i];
-        }
-        return maks
-    }
 
+
+let indexMax = niz => {
+    let max = niz[0];
+    let imax = 0;
+    niz.forEach((el, i) => {
+        if(el > max) {
+            max = el;
+            imax = i;
+        }
+    });
+    return imax;
 }
-function minEl (niz){
+
+console.log(indexMax(a));
+
+function maxEl(niz) {
+    let max = niz[0];
+    for(let i = 1; i < niz.length; i++) {
+        if(niz[i] > max) {
+            max = niz[i];
+        }
+    }
+    return max;
+}
+
+function minEl(niz) {
     let min = niz[0];
-    
-    for (let i = 1; i < niz.length; i++) {
-        if (niz[i] < min) {
+    for(let i = 1; i < niz.length; i++) {
+        if(niz[i] < min) {
             min = niz[i];
         }
-        return min;
     }
-
+    return min;
 }
 
-let indexMaxCallback = niz => {
-    let max = maxEl(niz);
-    let indexmax;
-    niz.forEach((element, i)=>{
-        if(element == max){
-            indexmax=i;
+let indexSvojstvo = (niz, svojstvo) => {
+    let s = svojstvo(niz);
+    let index;
+    niz.forEach((el, i) => {
+        if(el == s) {
+            index = i;
         }
     });
-    return indexmax;
+    return index;
 }
 
-let indexMinCallback = niz => {
-    let min = minEl(niz);
-    let indexmin;
-    niz.forEach((element, i)=>{
-        if(element == min){
-            indexmin=i;
-        }
-    });
-    return indexmin;
-}
+console.log(indexSvojstvo(a, maxEl));
+console.log(indexSvojstvo(a, minEl));
 
-let indexSvojstvo
+
+
+
+
+
+
+
+
+
+
+// function maksEl (niz){
+//     let maks = niz[0];
+    
+//     for (let i = 1; i < niz.length; i++) {
+//         if (niz[i] > maks) {
+//             maks = niz[i];
+//         }
+//         return maks
+//     }
+
+// }
+// function minEl (niz){
+//     let min = niz[0];
+    
+//     for (let i = 1; i < niz.length; i++) {
+//         if (niz[i] < min) {
+//             min = niz[i];
+//         }
+//         return min;
+//     }
+
+// }
+
+// let indexMaxCallback = niz => {
+//     let max = maxEl(niz);
+//     let indexmax;
+//     niz.forEach((element, i)=>{
+//         if(element == max){
+//             indexmax=i;
+//         }
+//     });
+//     return indexmax;
+// }
+
+// let indexMinCallback = niz => {
+//     let min = minEl(niz);
+//     let indexmin;
+//     niz.forEach((element, i)=>{
+//         if(element == min){
+//             indexmin=i;
+//         }
+//     });
+//     return indexmin;
+// }
+
+// let indexSvojstvo
