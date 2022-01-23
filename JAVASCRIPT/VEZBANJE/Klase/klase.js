@@ -23,10 +23,10 @@ class Boja {
     }
 
 
-    set intenzitet (i) {
+    set intenzitet(i) {
         this._intenzitet = i;
     }
-    get intenzitet(){
+    get intenzitet() {
         return this._intenzitet
     }
 }
@@ -38,12 +38,12 @@ class Boja {
 /////////DATUM
 
 class Datum {
-    constructor(d,m,g){
-        this.dan=d;
-        this.mesec=m;
-        this.godina=g;
+    constructor(d, m, g) {
+        this.dan = d;
+        this.mesec = m;
+        this.godina = g;
     }
-    
+
     set dan(d) {
         this._dan = d;
     }
@@ -73,7 +73,106 @@ class Datum {
 
 //radnik
 class Radnik {
-    constructor()
+    constructor(i, p) {
+        this.ime = i;
+        this.plata = p;
+    }
+    set ime(i) {
+        this._ime = i;
+    }
+    get ime() {
+        return this._ime
+    }
+
+    set plata(p) {
+        this._plata = p;
+    }
+    get plata() {
+        return this._plata
+    }
+
+
+    stampaj() {
+        console.log(this)
+    }
 }
 
-export {Boja, Datum, Radnik};
+//Autobus
+
+class Autobus {
+    constructor(rb, bs) {
+        this.registarskiBroj = rb;
+        this.brojSedista = bs;
+    }
+
+    set registarskiBroj(rb) {
+        this._registarskiBroj = rb;
+    }
+    get registarskiBroj() {
+        return this._registarskiBroj
+    }
+
+    set brojSedista(bs) {
+        this._brojSedista = bs;
+    }
+    get brojSedista() {
+        return this._brojSedista
+    }
+
+    stampaj() {
+        console.log(this)
+    }
+}
+
+
+
+///////////////////////////////////////////
+
+//Radio
+
+class Radio {
+    constructor(s, f, jt) {
+        this.stanica = st;
+        this.frekfencija = fr;
+        this.jacinaTona = jt;
+    }
+    set stanica(s) {
+        this._stanica = s;
+    }
+    get stanica() {
+        return this._stanica
+    }
+
+    set frekfencija(f) {
+        if (f >= 85.5 && f <= 108) {
+            this._frekfencija = f;
+        }
+        else {
+            this._frekfencija = 90;
+        }
+    }
+    get frekfencija() {
+        return this._frekfencija
+    }
+
+
+    set jacinaTona(jt) {
+        if ( jt >=0 && jt<=20){
+            this._jacinaTona = jt;
+        }
+        else {
+            this._jacinaTona = 10;
+        }
+    }
+    get jacinaTona() {
+        return this._jacinaTona
+    }
+
+    promeniZvuk(){
+        
+    }
+}
+
+
+
+export { Boja, Datum, Radnik, Autobus, Radio };
