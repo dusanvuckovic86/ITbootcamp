@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    max-width: 75%;
+    margin: auto;
+}
+#glavniNaslov{
+    text-align: center;
+}
+#podnaslov{
+    text-align: center;
+}
+.row {
+    overflow: hidden;
+}
+
+[class*="col-"]{
+    float: left;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul li a {
+    background-color: blueviolet;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: block;
+}
+ul li a:hover {
+    background-color: rgb(177, 95, 253);
+}
