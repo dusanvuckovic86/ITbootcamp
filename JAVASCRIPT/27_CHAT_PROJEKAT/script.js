@@ -1,7 +1,7 @@
 import Chatroom from "./chat.js";
 
 let chat1 = new Chatroom ("general","pPeric" )
-
+chat1.addChat()
 console.log(chat1)
 chat1.username = "test"
 console.log(chat1.username)
