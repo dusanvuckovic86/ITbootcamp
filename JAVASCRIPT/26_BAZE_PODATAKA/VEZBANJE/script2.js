@@ -317,8 +317,9 @@ db.collection('tasks')
         if (!snapshot.empty) {
             let allDocs = snapshot.docs;
             allDocs.forEach(doc => {
+                let obj = doc.data();
+                console.log(obj.title)
 
-                console.log(doc.title)
 
             });
         }
@@ -347,7 +348,7 @@ db.collection('tasks')
             });
         }
         else {
-            console.log(`Nema dokumenata u kolekciji`)
+            console.log(`Nema zadataka sa zadatim uslovom`)
         }
     })
     .catch(err => {
@@ -355,4 +356,81 @@ db.collection('tasks')
     });
 
 
-    //Treba da se izvrše u tekućoj godini
+//Treba da se izvrše u tekućoj godini
+let now = new Date();
+let year = now.getFullYear();
+let date1 = new Date(year, 0, 1); // prvi januar tekuce godine
+let date2 = new Date(year + 1, 0, 1);
+
+let date1TimeStamp = firebase.firestore.Timestamp.fromDate(date1)
+let date2TimeStamp = firebase.firestore.Timestamp.fromDate(date2)
+
+db.collection('tasks')
+    .where('dueDate', '>=', date1TimeStamp)
+    .where('dueDate', '<', date2TimeStamp)
+    .get()
+    .then(snapshot => {
+        if (!snapshot.empty) {
+
+            snapshot.docs.forEach(doc => {
+                console.log(doc.data())
+            });
+        }
+        else {
+            console.log(`Nema dokumenata u kolekciji`)
+        }
+    })
+    .catch(err => {
+        console.log(`Nemoguce dohvatiti dokumente iz kolekcije: ${err}`)
+    });
+
+//Su završeni
+// let now = new Date();
+
+// let date1TimeStamp = firebase.firestore.Timestamp.fromDate(now)
+
+
+// db.collection('tasks')
+//     .where('dueDate', '<=', date1TimeStamp)
+//     .get()
+//     .then(snapshot => {
+//         if (!snapshot.empty) {
+
+//             snapshot.docs.forEach(doc => {
+//                 console.log(doc.data())
+//             });
+//         }
+//         else {
+//             console.log(`Nema dokumenata u kolekciji`)
+//         }
+//     })
+//     .catch(err => {
+//         console.log(`Nemoguce dohvatiti dokumente iz kolekcije: ${err}`)
+//     });
+
+
+
+
+// //Tek treba da počnu.
+// let now = new Date();
+
+// let date1TimeStamp = firebase.firestore.Timestamp.fromDate(now)
+
+
+// db.collection('tasks')
+//     .where('startDate', '>', date1TimeStamp)
+//     .get()
+//     .then(snapshot => {
+//         if (!snapshot.empty) {
+
+//             snapshot.docs.forEach(doc => {
+//                 console.log(doc.data())
+//             });
+//         }
+//         else {
+//             console.log(`Nema dokumenata u kolekciji`)
+//         }
+//     })
+//     .catch(err => {
+//         console.log(`Nemoguce dohvatiti dokumente iz kolekcije: ${err}`)
+//     });
