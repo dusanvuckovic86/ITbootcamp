@@ -77,17 +77,14 @@ class Chatroom {
             .where('room', '==', this.room)
             .orderBy('created_at', 'asc')
             .onSnapshot(snapshot => {
-                    snapshot.docChanges().forEach(change => {
-                        // //kada se desila promena u bazi ispisati 'Promena u bazi'
-                        // if (change.type == 'added') {
-                        //     console.log('Promena u bazi')
-                        // };
-                        //ispisati dokumente
-                        if (change.type == "added") {
-                            callback(change.doc.data())
-                        }
-                    });
-                })
+                snapshot.docChanges().forEach(change => {
+                    // //kada se desila promena u bazi                     
+                    //ispisati dokumente
+                    if (change.type == "added") {
+                        callback(change.doc.data())
+                    }
+                });
+            })
     }
 
 
@@ -95,19 +92,4 @@ class Chatroom {
 }
 
 
-let chat3 = new Chatroom('Milena', 'general')
-// chat3.addChat("Trenin cemo odrzati u sredu u 18h")
-//     .then(() => {
-//         console.log('Uspesno dodat chat')
-//     })
-//     .catch((err) => {
-//         console.log(err)
-//     })
-
-
-chat3.getChats(d => {
-    console.log(d);
-});
-
-console.log(chat3.username)
 export default Chatroom;
