@@ -4,22 +4,83 @@
     padding: 0;
 }
 body{
-    max-width: 75%;
+    max-width: 65%;
     margin: auto;
-    background-color: rgb(202, 200, 202);
+    font-family: 'Montserrat', sans-serif;
 }
 #glavniNaslov{
     text-align: center;
+    margin: 15px 0;
+    color: #323232;
+    font-size: 75px;
 }
 #podnaslov{
+    margin: 15px 0;
     text-align: center;
+    color: #323232;
+    font-size: 35px;
 }
 .row {
     overflow: hidden;
 }
 
-[class*="col-"]{
-    float: left;
+
+/* Mobile*/
+@media only screen and (max-width: 829px){
+    [class*="col-"] {
+        width: 100%;
+      }
+      ul li a {
+        margin-top: 5px;
+        margin-bottom: 5px; 
+        font-size: 15px;       
+    }
+    #element{
+        height: 150px;
+        margin: 25px 0; 
+    }
+}
+
+
+/* Tablet */
+@media only screen and (min-width: 830px) and (max-width: 1075px){
+    [class*="col-m-"]{
+        width: 25%;
+        float: left;
+    }
+    ul li a {
+        margin-top: 5px;
+        margin-bottom: 5px; 
+        font-size: 15px;       
+    }
+    #element{
+        height: 150px;
+        margin: 25px 0; 
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1076px){
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    [class*="col-"]{
+        float: left;
+    }
+    ul li a {
+        font-size: 20px; 
+    }
+   
 }
 
 ul li {
@@ -27,14 +88,59 @@ ul li {
 }
 
 ul li a {
-    background-color: blueviolet;
+    background-color:#323232;
     padding: 10px 25px;
     text-decoration: none;
-    color: white;
+    color: #ffe600;
     margin-left: 5px;
     margin-right: 5px;
     display: block;
+    border-radius: 25px;
+    text-align: center;
+    
 }
 ul li a:hover {
-    background-color: rgb(177, 95, 253);
+    background-color: #ffe600;
+    color: #323232;
 }
+
+
+/* btn part */
+
+.form {
+    margin: 15px 0;
+    text-align: center;
+}
+#element{
+    border: #323232 solid 2px;
+    height: 350px;
+    margin: 25px 0;
+    background-color: white;
+    border-radius: 25px;
+}
+.btnColor {
+    background-color: #323232;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    color: #ffe600;
+    margin-top: 10px;
+    
+}
+.btnColor:hover {
+    background-color: #ffe600;
+    color: #323232;
+}
+#unosPoruke, #userName {
+    padding: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin: 0 10px;
+}
+    
+
+
+
+

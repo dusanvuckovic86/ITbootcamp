@@ -7,27 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat room</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,200&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <h1 id="glavniNaslov">Chat room</h1>
-    <h3 id="podnaslov">Select chat room</h3>
+    <h1 id="glavniNaslov">.chat</h1>
+    <h3 id="podnaslov">select Room</h3>
     <div class="row">
         <ul>
-            <li class="col-3"> <a href="#">General</a></li>
-            <li class="col-3"> <a href="#">JS</a></li>
-            <li class="col-3"> <a href="#">Homeworks</a></li>
-            <li class="col-3"> <a href="#">Tests</a></li>
+            <li class="col-3 col-m-3" > <a href="#">General</a></li>
+            <li class="col-3 col-m-3" > <a href="#">JavaScript</a></li>
+            <li class="col-3 col-m-3" > <a href="#">Homeworks</a></li>
+            <li class="col-3 col-m-3" > <a href="#">Tests</a></li>
         </ul>
     </div>
     <div id="element"></div>
-    <form>
+    <form class="form">
         <input type="text" placeholder="Your message" name="" id="unosPoruke">
-        <input type="submit" value="Send message">
+        <input type="submit" value="Send" class="btnColor" id="btnUnosPoruke">
     </form>
-    <form>
+    <form class="form">
         <input type="text" placeholder="Update username" name="" id="userName">
-        <input type="submit" value="Update username">
+        <input type="submit" value="Update" class="btnColor" id="btnUserName">
     </form>
 
 
