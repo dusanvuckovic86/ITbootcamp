@@ -14,27 +14,6 @@ class Chatroom {
 
 
 
-    // set username(u) {
-    //     let userName = document.getElementById('userName');
-    //     let btnUserName = document.getElementById('btnUserName')
-
-    //     btnUserName.addEventListener('click', x => {
-    //         x.preventDefault();
-
-    //         let userNameVal = userName.value;
-    //         let userNameValue = userNameVal.trim();
-
-    //         if ((userNameValue != "" || userNameValue != null) && userNameValue.length >= 2 && userNameValue.length <= 10) {
-    //             this._username = u;
-    //             console.log('Ispravno korisnicko ime')
-    //         }
-    //         else {
-    //             alert('Username must include more than two and less then ten letters or numbers')
-    //         };
-    //     });
-
-    // }
-
     set username(u) {
 
         let userNameVal = u;
@@ -48,7 +27,6 @@ class Chatroom {
             alert('Username must include more than two and less then ten letters or numbers')
         };
 
-
     }
     get username() {
         return this._username;
@@ -56,6 +34,7 @@ class Chatroom {
 
 
     // Dodavanje nove poruke
+
     async addChat(message) {
 
         let vreme = new Date();
@@ -72,6 +51,7 @@ class Chatroom {
 
     }
 
+
     getChats(callback) {
         this.chats
             .where('room', '==', this.room)
@@ -86,8 +66,16 @@ class Chatroom {
                 });
             })
     }
+    //     validateUserName(vrednost){
+    //     if(vrednost.length >= 2 && vrednost.length <=10){
 
+    //     }
+    // }
+    updateUsername(username) {
 
+        this.username = username;
+
+    }
 
 }
 
